@@ -49,4 +49,27 @@ def calculate_dilution(
     >>> calculate_dilution(stock_concentration=5.0, stock_volume=1.0, final_volume=5.0)
     1.0
     """
-    pass
+def calculate_dilution(stock_concentration, stock_volume, final_volume):
+    """
+    calculate the final concentration of a solution after dilution.
+    ...
+    """
+    
+    for name, value in {
+        "stock_concentration": stock_concentration,
+        "stock_volume": stock_volume,
+        "final_volume": final_volume,
+    }.items():
+        if not isinstance(value, (int, float)):
+            raise TypeError(f"{name} must be a number (int or float).")
+
+  
+    if stock_concentration <= 0 or stock_volume <= 0 or final_volume <= 0:
+        raise ValueError("All inputs must be positive numbers.")
+
+    if stock_volume > final_volume:
+        raise ValueError("stock_volume must be less than or equal to final_volume.")
+
+
+    return (stock_concentration * stock_volume) / final_volume
+

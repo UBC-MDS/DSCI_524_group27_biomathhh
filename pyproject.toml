@@ -17,9 +17,12 @@ version = "0.1.0"
 
 description = ""
 authors = [
-    { name = "Diana Dadkhah Tirani Victoria Farkas Gurveer Madurai Zhihao Xie
-" },
+  { name = "Diana Dadkhah" },
+  { name = "Tirani Victoria Farkas" },
+  { name = "Gurveer Madurai" },
+  { name = "Zhihao Xie" },
 ]
+
 license = "MIT"
 requires-python = ">= 3.10" # Adjust based on the minimum version of Python that you support
 readme = {"file" = "README.md", "content-type" = "text/markdown"}
