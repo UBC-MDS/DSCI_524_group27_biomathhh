@@ -1,3 +1,5 @@
+import math
+
 def exponential_growth(initial_value, growth_rate, time):
     """
     Calculate exponential growth over a specified time period.
@@ -31,3 +33,26 @@ def exponential_growth(initial_value, growth_rate, time):
         >>> exponential_growth(50, 0.1, 0)
         50.0
     """
+    # checking for data types
+    if not isinstance(initial_value, (int, float)):
+        raise TypeError(f"initial_value must be a number, got {type(initial_value).__name__}")
+    
+    if not isinstance(growth_rate, (int, float)):
+        raise TypeError(f"growth_rate must be a number, got {type(growth_rate).__name__}")
+    
+    if not isinstance(time, (int, float)):
+        raise TypeError(f"time must be a number, got {type(time).__name__}")
+    
+    # checking for non NAN and finite values
+    if math.isnan(initial_value) or math.isinf(initial_value):
+        raise ValueError("initial_value must be a finite number")
+    
+    if math.isnan(growth_rate) or math.isinf(growth_rate):
+        raise ValueError("growth_rate must be a finite number")
+    
+    if math.isnan(time) or math.isinf(time):
+        raise ValueError("time must be a finite number")
+
+    final_value = initial_value * math.exp(growth_rate * time)
+
+    return final_value
