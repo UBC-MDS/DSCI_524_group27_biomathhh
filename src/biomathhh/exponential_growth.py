@@ -1,3 +1,5 @@
+import math
+
 def exponential_growth(initial_value, growth_rate, time):
     """
     Calculate exponential growth over a specified time period.
@@ -31,3 +33,6 @@ def exponential_growth(initial_value, growth_rate, time):
         >>> exponential_growth(50, 0.1, 0)
         50.0
     """
+    final_value = initial_value * math.exp(growth_rate * time)
+
+    return final_value
