@@ -52,6 +52,17 @@ def exponential_growth(initial_value, growth_rate, time):
     
     if math.isnan(time) or math.isinf(time):
         raise ValueError("time must be a finite number")
+    
+    #check constraints
+    if initial_value <= 0:
+        raise ValueError(f"initial_value must be positive")
+    
+    if time < 0:
+        raise ValueError(f"time must be non-negative")
+    
+    # check for overflow
+    if math.isinf(final_value):
+        raise OverflowError("Result is infinite, overflow error")
 
     final_value = initial_value * math.exp(growth_rate * time)
 
