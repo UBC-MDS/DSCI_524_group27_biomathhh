@@ -34,6 +34,8 @@ def test_strong_decay():
     assert exponential_growth(1000, -0.5, 20) == 1000 * math.exp(-10)
     print("test_strong_decay passed")
 
+
+
 if __name__ == "__main__":
     print("Running exponential growth tests...\n")
     
