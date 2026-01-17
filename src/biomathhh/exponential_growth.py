@@ -21,7 +21,14 @@ def exponential_growth(initial_value, growth_rate, time):
     Returns:
     --------
         float: The calculated value after exponential growth over the specified time period.
-    
+
+    Raises:
+    -------
+        TypeError: If any parameter is not a number.
+
+        ValueError: If parameters are NaN, infinite, or violate constraints.
+
+        OverflowError: If the calculation results in a value too large to represent.
     
     Examples:
         >>> exponential_growth(100, 0.05, 10)
@@ -52,7 +59,21 @@ def exponential_growth(initial_value, growth_rate, time):
     
     if math.isnan(time) or math.isinf(time):
         raise ValueError("time must be a finite number")
-
-    final_value = initial_value * math.exp(growth_rate * time)
+    
+    #check constraints
+    if initial_value <= 0:
+        raise ValueError(f"initial_value must be positive")
+    
+    if time < 0:
+        raise ValueError(f"time must be non-negative")
+    
+    try:
+        final_value = initial_value * math.exp(growth_rate * time)
+        
+        if math.isinf(final_value):
+                raise OverflowError("Result is infinite, calculation overflow occurred")
+        
+    except OverflowError:
+        raise OverflowError(f"Exponential calculation resulted in overflow")
 
     return final_value
