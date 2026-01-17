@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 
-from src.biomathhh.sw_diversity_index import sw_diversity_index
+from biomathhh.sw_diversity_index import sw_diversity_index
 
 
 def test_returns_float():
@@ -12,30 +12,30 @@ def test_returns_float():
     assert isinstance(result, float)
 
 
-def test_empty_array():
+def test_empty_array_returns_zero():
     """
     Test that an empty array returns 0.0
     """
     assert sw_diversity_index([]) == 0.0
 
 
-def test_empty_array():
+def test_single_species_returns_zero():
     """
     Test that a single-species array returns 0.0
     """
     assert sw_diversity_index([7]) == 0.0
 
 
-def test_empty_array():
+def test_all_zeros_returns_zero():
     """
-    Test that arrays containing zeros are handled correctly
+    Test that arrays containing only zeros return 0.0
     """
-    assert sw_diversity_index([0,0,0]) == 0.0
+    assert sw_diversity_index([0, 0, 0]) == 0.0
 
 
 def test_negative_values_raise_error():
     """
-    Test that negative values raise an error
+    Test that negative values raise a ValueError
     """
     with pytest.raises(ValueError):
         sw_diversity_index([10, -5, 20])
@@ -43,8 +43,7 @@ def test_negative_values_raise_error():
 
 def test_non_numeric_input_raises_error():
     """
-    Docstring for test_non_numeric_input_raises_error
-    Test that non-numeric inputs raise an error
+    Test that non-numeric inputs raise a TypeError
     """
     with pytest.raises(TypeError):
         sw_diversity_index([10, "a", 20])
@@ -56,11 +55,3 @@ def test_known_input():
     """
     result = sw_diversity_index([50, 30, 20])
     assert abs(result - 1.0297) < 1e-4
-
-
-
-
-
-
-
-
