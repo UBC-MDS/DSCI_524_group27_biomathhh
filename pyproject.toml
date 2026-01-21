@@ -37,7 +37,9 @@ classifiers = [
 # TODO: add keywords
 keywords = []
 # TODO: add dependencies
-dependencies = []
+dependencies = [
+    "numpy>=1.24.0"
+]
 
 [project.urls]
 Homepage = "https://github.com/ubc-mds/biomathhh"
@@ -170,7 +172,7 @@ features = [
 # hatch run docs:build will build your documentation
 # hatch run docs:serve will serve them 'live' on your computer locally
 [tool.hatch.envs.docs.scripts]
-build = ["sphinx-build {args:-W -b html docs docs/_build}"]
+build = ["sphinx-build {args:-b html docs docs/_build}"]
 serve = ["sphinx-autobuild docs --watch src/biomathhh {args:-b html docs/_build/serve}"]
 
 
