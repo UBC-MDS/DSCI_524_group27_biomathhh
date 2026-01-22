@@ -19,7 +19,7 @@ quartodoc:
     - title: Functions
       desc: ""
       contents:
-        - calculate_dilution
-        - exponential_growth
-        - calculate_pH
-        - sw_diversity_index
+        - biomathhh.dilution.calculate_dilution
+        - biomathhh.exponential_growth.exponential_growth
+        - biomathhh.pH_scale.calculate_pH
+        - biomathhh.sw_diversity_index.sw_diversity_index
