@@ -139,11 +139,14 @@ features = [
     "build",
 ]
 detached = true
+dependencies = [
+    "build",
+]
 
 # This table installs created the command hatch run install:check which will build and check your package.
 [tool.hatch.envs.build.scripts]
 check = [
-    "hatch build {args:--clean}",
+    "python -m build",
     "twine check dist/*",
 ]
 
