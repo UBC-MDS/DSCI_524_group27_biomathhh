@@ -38,7 +38,9 @@ classifiers = [
 keywords = []
 # TODO: add dependencies
 dependencies = [
-    "numpy>=1.24.0"
+    "numpy>=1.24.0",
+    "quartodoc>=0.9.1",
+    "quarto-cli"
 ]
 
 [project.urls]
@@ -172,8 +174,9 @@ features = [
 # hatch run docs:build will build your documentation
 # hatch run docs:serve will serve them 'live' on your computer locally
 [tool.hatch.envs.docs.scripts]
-build = ["sphinx-build {args:-b html docs docs/_build}"]
-serve = ["sphinx-autobuild docs --watch src/biomathhh {args:-b html docs/_build/serve}"]
+build = ["quartodoc build",
+        "quarto render",]
+preview = ["quarto preview"]
 
 
 
