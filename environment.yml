@@ -1,0 +1,18 @@
+# install with conda env create -f environment.yml 
+name: "biomathhh"
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python==3.10
+  - pandas
+  - numpy
+  - os
+  - sys
+  - pip
+  - datetime
+  - importlib
+  - pip:
+    - pytest
+    
