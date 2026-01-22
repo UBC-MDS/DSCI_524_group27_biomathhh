@@ -1,0 +1,27 @@
+---
+title: "Biomathhh"
+---
+
+# Welcome to Biomathhh
+
+Description here
+
+## Installation
+```bash
+pip install biomathhh
+```
+
+## Quick Start
+
+Here are examples of how to use each function:
+
+### Calculate Dilution
+
+
+### Exponential Growth
+
+
+### pH Calculation
+
+
+### Shannon-Wiener Diversity Index

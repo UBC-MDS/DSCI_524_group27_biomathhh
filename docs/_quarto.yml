@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Biomathhh"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Reference"
+        href: reference/index.qmd
+
+quartodoc:
+  package: biomathhh
+  dir: reference
+  title: API Reference
+  sections:
+    - title: Functions
+      desc: ""
+      contents:
+        - dilution.calculate_dilution
+        - exponential_growth.exponential_growth
+        - pH_scale.calculate_pH
+        - sw_diversity_index.sw_diversity_index
