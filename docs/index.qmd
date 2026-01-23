@@ -4,7 +4,7 @@ title: "Biomathhh"
 
 # Welcome to Biomathhh
 
-Description here
+**Biomathhh** is a Python package that provides simple, well tested functions for common biological calculations. Below you will find a quick start on how to use the package functions.
 
 ## Installation
 ```bash
@@ -22,6 +22,33 @@ Here are examples of how to use each function:
 
 
 ### pH Calculation
+Calculate pH scale for a given hydronium concentration
 
+```python
+from biomathhh.pH_scale import calculate_pH
+
+hydronium_concentration = 1e-4
+ph_value = calculate_pH(hydronium_concentration)
+
+print(ph_value)
+```
+```python
+Output:
+4.0
+```
 
 ### Shannon-Wiener Diversity Index
+The Shannon Wiener index quantifies species diversity by accounting for both species richness and evenness.
+
+```python
+from biomathhh.sw_diversity_index import sw_diversity_index
+
+species_counts = [50, 30, 20]
+diversity_index = sw_diversity_index(species_counts)
+
+print(diversity_index)
+```
+```python
+Output:
+1.0297
+```
