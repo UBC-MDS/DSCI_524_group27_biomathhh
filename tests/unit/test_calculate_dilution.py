@@ -43,3 +43,17 @@ def test_calculate_dilution_raises_when_not_numeric():
 
     with pytest.raises(TypeError):
         calculate_dilution(5.0, 1.0, None)
+        
+        
+def test_calculate_dilution_accepts_int_inputs():
+    # inteegers should be accepted and still compute correctly
+    assert calculate_dilution(5, 2, 10) == 1.0
+
+
+def test_calculate_dilution_invariant_to_scaling_of_volumes():
+    # Ifyou scale both volumes by the same factor, concentration should not change at all
+    c_small = calculate_dilution(8.0, 1.0, 4.0)   # 8*(1/4)=2
+    c_scaled = calculate_dilution(8.0, 10.0, 40.0)  # same ratio (10/40)=1/4  ##also 2
+    assert c_small == pytest.approx(c_scaled)
+    assert c_small == pytest.approx(2.0)
+
