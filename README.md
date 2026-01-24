@@ -50,7 +50,7 @@ Delnaz Dadkhah Tirani, Victoria Farkas, Gurveer Madurai, Zhihao Xie
 You can install this package into your preferred Python environment using pip:
 
 ```bash
-$ pip install biomathhh
+$ pip install git+https://github.com/UBC-MDS/DSCI_524_group27_biomathhh.git
 ```
 
 ## Usage
