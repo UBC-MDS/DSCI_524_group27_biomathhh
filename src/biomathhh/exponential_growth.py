@@ -30,15 +30,20 @@ def exponential_growth(initial_value, growth_rate, time):
 
         OverflowError: If the calculation results in a value too large to represent.
     
-    Examples:
-        >>> exponential_growth(100, 0.05, 10)
-        164.87212707001282
-        
-        >>> exponential_growth(1000, -0.03, 5)
-        860.7079764250578
-        
-        >>> exponential_growth(50, 0.1, 0)
-        50.0
+    Examples
+    --------
+    Compute exponential growth using N(t) = N0 * exp(r * t).
+
+    >>> from biomathhh.exponential_growth import exponential_growth
+    >>> exponential_growth(50, 0.1, 0)
+    50.0
+
+    >>> round(exponential_growth(100, 0.05, 10), 6)
+    164.872127
+
+    >>> round(exponential_growth(1000, -0.03, 5), 6)
+    860.707976
+
     """
     # checking for data types
     if not isinstance(initial_value, (int, float)):
