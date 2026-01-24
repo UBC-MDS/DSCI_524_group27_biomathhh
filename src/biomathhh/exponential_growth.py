@@ -3,48 +3,46 @@ import math
 def exponential_growth(initial_value, growth_rate, time):
     """
     Calculate exponential growth over a specified time period.
-    
+
     This function computes the value after exponential growth using the formula:
-    final_value = initial_value * e^(growth_rate * time)
-    
-    Parameters:
-    -----------
-        initial_value (float): The starting value at time t=0.
-            Must be a positive number.
 
-        growth_rate (float): The continuous growth rate (as a decimal, not percentage).
-            Positive values indicate growth, negative values indicate decay.
+        N(t) = N0 * exp(r * t)
 
-        time (float): The time period over which growth occurs. Must be non-negative.
-            The units should match the units of the growth_rate.
-    
-    Returns:
-    --------
-        float: The calculated value after exponential growth over the specified time period.
+    Parameters
+    ----------
+    initial_value : float
+        The starting value at time t = 0. Must be positive.
+    growth_rate : float
+        The continuous growth rate (decimal, not percentage).
+        Positive values indicate growth; negative values indicate decay.
+    time : float
+        The time period over which growth occurs. Must be non-negative.
 
-    Raises:
+    Returns
     -------
-        TypeError: If any parameter is not a number.
+    float
+        The calculated value after exponential growth.
 
-        ValueError: If parameters are NaN, infinite, or violate constraints.
+    Raises
+    ------
+    TypeError
+        If any input is not numeric.
+    ValueError
+        If any input is NaN, infinite, or violates constraints.
+    OverflowError
+        If the calculation results in overflow.
 
-        OverflowError: If the calculation results in a value too large to represent.
-    
     Examples
     --------
-    Compute exponential growth using N(t) = N0 * exp(r * t).
-
     >>> from biomathhh.exponential_growth import exponential_growth
     >>> exponential_growth(50, 0.1, 0)
     50.0
-
     >>> round(exponential_growth(100, 0.05, 10), 6)
     164.872127
-
     >>> round(exponential_growth(1000, -0.03, 5), 6)
     860.707976
-
     """
+
     # checking for data types
     if not isinstance(initial_value, (int, float)):
         raise TypeError(f"initial_value must be a number, got {type(initial_value).__name__}")
