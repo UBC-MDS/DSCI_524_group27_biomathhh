@@ -11,6 +11,11 @@ website:
       - text: "Reference"
         href: reference/
 
+format:
+  html:
+    theme: sketchy
+    toc: true
+
 quartodoc:
   package: biomathhh
   dir: reference

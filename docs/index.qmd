@@ -8,7 +8,7 @@ title: "Biomathhh"
 
 ## Installation
 ```bash
-pip install biomathhh
+pip install git+https://github.com/UBC-MDS/DSCI_524_group27_biomathhh.git
 ```
 
 ## Quick Start
