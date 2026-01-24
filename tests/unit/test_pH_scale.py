@@ -20,3 +20,9 @@ def test_case1():
     
 def test_case2(): 
     assert abs(calculate_pH(6.31e-8)-7.2)/7.2<0.01
+
+def test_case3(): 
+    assert abs(calculate_pH(0.5)-0.301)/0.301<0.01
+
+def test_case4(): 
+    assert abs(calculate_pH(0.0008)-3.1)/3.1<0.01

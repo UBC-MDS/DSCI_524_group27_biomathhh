@@ -8,22 +8,30 @@ def calculate_pH(hydronium_concentration):
     This function computes pH value using the formula:
     pH = -log(hydronium concentration)
     
-    Parameters:
+    Parameters
     -----------
-        hydronium_concentration (float): the concentration of hydronium.
-            Must be a positive number.
+    hydronium_concentration: float
+		The concentration of hydronium. Must be a positive number.
     
-    Returns:
+    Returns
     --------
-        float: The calculated pH value.
+	float
+		The calculated pH value.
+
+	Raises
+    ------
+    TypeError
+        If any input is not numeric.
+    ValueError
+        If any input is not positive.
     
-    
-    Examples:
-        >>> calculate_pH(1e-7)
-        7.0
-        
-        >>> calculate_pH(6.31e-8)
-        7.2
+    Examples
+	--------
+    >>> from biomathhh.pH_scale import calculate_pH
+	>>> calculate_pH(1e-7)
+	7.0
+	>>> calculate_pH(6.31e-8)
+	7.2
 
     """
     if not isinstance(hydronium_concentration, numbers.Number): 
