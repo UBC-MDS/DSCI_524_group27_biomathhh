@@ -9,7 +9,7 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Reference"
-        href: reference/index.qmd
+        href: reference/
 
 quartodoc:
   package: biomathhh
