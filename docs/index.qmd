@@ -16,11 +16,35 @@ pip install biomathhh
 Here are examples of how to use each function:
 
 ### Calculate Dilution
+Computes the final concentration of a solution after dilution using the standard laboratory equation
 
+```python
+from biomathhh.dilution import calculate_dilution
 
+final_conc = calculate_dilution(
+    stock_concentration=5.0,
+    stock_volume=1.0,
+    final_volume=5.0
+)
+print(final_conc)
+```
+```python
+Output:
+1.0
+```
 ### Exponential Growth
+Calculates how a quantity grows or decays over time assuming continuous exponential change.
 
+```python
+from biomathhh.exponential_growth import exponential_growth
 
+value = exponential_growth(100, 0.05, 10)
+print(round(value, 6))
+```
+```python
+Output:
+164.872127
+```
 ### pH Calculation
 Calculate pH scale for a given hydronium concentration
 
