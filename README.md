@@ -10,7 +10,7 @@ If you don't plan to publish to PyPI, you can remove them._
 
 # Biomathhh
 
-[!Documentation](https://ubc-mds.github.io/DSCI_524_group27_biomathhh/)
+[Documentation](https://ubc-mds.github.io/DSCI_524_group27_biomathhh/)
 
 ## Overview
 
@@ -55,7 +55,7 @@ $ pip install git+https://github.com/UBC-MDS/DSCI_524_group27_biomathhh.git
 
 ## Usage
 
-For more examples on how to use Biomathhh, use cases can be found in the package documentation [!here](https://ubc-mds.github.io/DSCI_524_group27_biomathhh/).
+For more examples on how to use Biomathhh, use cases can be found in the package documentation [here](https://ubc-mds.github.io/DSCI_524_group27_biomathhh/).
 
 To use biomathhh in your code:
 
@@ -66,7 +66,7 @@ To use biomathhh in your code:
 
 ## Contributing
 
-Interested in contributing? Please check out the [!contributing guidelines](https://github.com/UBC-MDS/DSCI_524_group27_biomathhh/blob/main/CONTRIBUTING.md) for this project. Note that this project is released with a [!code of conduct](https://github.com/UBC-MDS/DSCI_524_group27_biomathhh/blob/main/CODE_OF_CONDUCT.md) and by contributing you agree to abide by its terms.
+Interested in contributing? Please check out the [contributing guidelines](https://github.com/UBC-MDS/DSCI_524_group27_biomathhh/blob/main/CONTRIBUTING.md) for this project. Note that this project is released with a [code of conduct](https://github.com/UBC-MDS/DSCI_524_group27_biomathhh/blob/main/CODE_OF_CONDUCT.md) and by contributing you agree to abide by its terms.
 
 ## Copyright
 
