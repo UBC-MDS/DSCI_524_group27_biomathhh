@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biomathhh",
+    "section": "",
+    "text": "Biomathhh is a Python package that provides simple, well tested functions for common biological calculations. Below you will find a quick start on how to use the package functions.\n\n\npip install biomathhh\n\n\n\nHere are examples of how to use each function:\n\n\nComputes the final concentration of a solution after dilution using the standard laboratory equation\nfrom biomathhh.dilution import calculate_dilution\n\nfinal_conc = calculate_dilution(\n    stock_concentration=5.0,\n    stock_volume=1.0,\n    final_volume=5.0\n)\nprint(final_conc)\nOutput:\n1.0\n\n\n\nCalculates how a quantity grows or decays over time assuming continuous exponential change.\nfrom biomathhh.exponential_growth import exponential_growth\n\nvalue = exponential_growth(100, 0.05, 10)\nprint(round(value, 6))\nOutput:\n164.872127\n\n\n\nCalculate pH scale for a given hydronium concentration\nfrom biomathhh.pH_scale import calculate_pH\n\nhydronium_concentration = 1e-4\nph_value = calculate_pH(hydronium_concentration)\n\nprint(ph_value)\nOutput:\n4.0\n\n\n\nThe Shannon Wiener index quantifies species diversity by accounting for both species richness and evenness.\nfrom biomathhh.sw_diversity_index import sw_diversity_index\n\nspecies_counts = [50, 30, 20]\ndiversity_index = sw_diversity_index(species_counts)\n\nprint(diversity_index)\nOutput:\n1.0297"
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "Biomathhh",
+    "section": "",
+    "text": "pip install biomathhh"
+  },
+  {
+    "objectID": "index.html#quick-start",
+    "href": "index.html#quick-start",
+    "title": "Biomathhh",
+    "section": "",
+    "text": "Here are examples of how to use each function:\n\n\nComputes the final concentration of a solution after dilution using the standard laboratory equation\nfrom biomathhh.dilution import calculate_dilution\n\nfinal_conc = calculate_dilution(\n    stock_concentration=5.0,\n    stock_volume=1.0,\n    final_volume=5.0\n)\nprint(final_conc)\nOutput:\n1.0\n\n\n\nCalculates how a quantity grows or decays over time assuming continuous exponential change.\nfrom biomathhh.exponential_growth import exponential_growth\n\nvalue = exponential_growth(100, 0.05, 10)\nprint(round(value, 6))\nOutput:\n164.872127\n\n\n\nCalculate pH scale for a given hydronium concentration\nfrom biomathhh.pH_scale import calculate_pH\n\nhydronium_concentration = 1e-4\nph_value = calculate_pH(hydronium_concentration)\n\nprint(ph_value)\nOutput:\n4.0\n\n\n\nThe Shannon Wiener index quantifies species diversity by accounting for both species richness and evenness.\nfrom biomathhh.sw_diversity_index import sw_diversity_index\n\nspecies_counts = [50, 30, 20]\ndiversity_index = sw_diversity_index(species_counts)\n\nprint(diversity_index)\nOutput:\n1.0297"
+  }
+]
