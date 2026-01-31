@@ -8,6 +8,8 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "Getting Started"
+        href: getting_started.qmd
       - text: "Reference"
         href: reference/
 
