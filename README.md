@@ -11,19 +11,16 @@
 
 [Documentation](https://ubc-mds.github.io/DSCI_524_group27_biomathhh/)
 
+## Contributors
+
+- [Delnaz Dadkhah Tirani](https://github.com/dianadadkhah)
+- [Victoria Farkas](https://github.com/farkasvic)
+- [Gurveer Madurai](https://github.com/gurverm)
+- [Zhihao Xie](https://github.com/lightgl)
+
 ## Overview
 
 Biomathhh is a Python package designed to efficiently provide common mathematical calculations used in biological research and analysis. This package provides life science researchers with easy-to-use functions for population dynamics, laboratory calculations, chemical properties, and biodiversity metrics. By consolidating these frequently-used formulas into a single package, Biomathhh aims to reduce repetitive coding and improve reproducibility in biological data analysis.
-
-## Functions
-
-- **exponential_growth**: Calculates exponential growth or decay over time using the continuous growth model (N = N₀ \* e^(rt)). Useful for modeling population growth, bacterial culture expansion, radioactive decay, etc.
-
-- **calculate_dilution**: Performs dilution and concentration calculations using the C₁V₁ = C₂V₂ formula. Helps researchers determine volumes and concentrations needed for preparing solutions, dilutions, and experimental reagents.
-
-- **calculate_pH**: Converts between pH values and hydrogen ion concentrations ([H⁺]).
-
-- **sw_diversity_index**: Computes the Shannon-Wiener Diversity Index (H') from species abundance data. This metric measures biodiversity in ecological communities.
 
 ## Python Ecosystem
 
@@ -40,9 +37,23 @@ While comprehensive scientific computing packages like **NumPy** and **SciPy** p
 
 Biomathhh fills the gap by providing a focused toolkit for the everyday mathematical needs of biologists across multiple subfields.
 
-## Contributors
+## Functions
 
-Delnaz Dadkhah Tirani, Victoria Farkas, Gurveer Madurai, Zhihao Xie
+- **exponential_growth**: Calculates exponential growth or decay over time using the continuous growth model  
+  $$N(t) = N_0 e^{rt}$$  
+  Useful for modeling population growth, bacterial culture expansion, radioactive decay, etc.
+
+- **calculate_dilution**: Performs dilution and concentration calculations using the standard laboratory equation  
+  $$C_1 V_1 = C_2 V_2$$  
+  Helps researchers determine volumes and concentrations needed for preparing solutions, dilutions, and experimental reagents.
+
+- **calculate_pH**: Converts between hydrogen ion concentration and pH using  
+  $$\text{pH} = -\log_{10}([H^+])$$
+
+- **sw_diversity_index**: Computes the Shannon–Wiener Diversity Index  
+  $$H' = -\sum_{i=1}^{S} p_i \ln(p_i)$$  
+  where \(p_i\) is the proportion of individuals belonging to species \(i\).
+
 
 ## Get started
 
@@ -52,16 +63,79 @@ You can install this package into your preferred Python environment using pip:
 $ pip install git+https://github.com/UBC-MDS/DSCI_524_group27_biomathhh.git
 ```
 
-## Usage
+## Example Usage
 
 For more examples on how to use Biomathhh, use cases can be found in the package documentation [here](https://ubc-mds.github.io/DSCI_524_group27_biomathhh/).
 
-To use biomathhh in your code:
+Below are working examples for each function in Biomathhh.
+
+### Calculate Dilution
 
 ```python
->>> import biomathhh
->>> biomathhh.hello_world()
+from biomathhh.dilution import calculate_dilution
+
+final_conc = calculate_dilution(
+    stock_concentration=5.0,
+    stock_volume=1.0,
+    final_volume=5.0
+)
+
+print(final_conc)
+````
+
+**Output:**
+
 ```
+1.0
+```
+
+### Exponential Growth
+
+```python
+from biomathhh.exponential_growth import exponential_growth
+
+value = exponential_growth(100, 0.05, 10)
+print(round(value, 6))
+```
+
+**Output:**
+
+```
+164.872127
+```
+
+### pH Calculation
+
+```python
+from biomathhh.pH_scale import calculate_pH
+
+ph_value = calculate_pH(1e-4)
+print(ph_value)
+```
+
+**Output:**
+
+```
+4.0
+```
+
+### Shannon–Wiener Diversity Index
+
+```python
+from biomathhh.sw_diversity_index import sw_diversity_index
+
+species_counts = [50, 30, 20]
+diversity_index = sw_diversity_index(species_counts)
+
+print(round(diversity_index, 4))
+```
+
+**Output:**
+
+```
+1.0297
+```
+
 
 ## Contributing
 
