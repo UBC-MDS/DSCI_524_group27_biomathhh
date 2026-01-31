@@ -5,7 +5,13 @@ def calculate_dilution(stock_concentration, stock_volume, final_volume):
     This function applies the standard laboratory dilution equation:
 
         C1 * V1 = C2 * V2
-
+         where:
+    - C₁ = stock_concentration
+    - V₁ = stock_volume
+    - C₂ = final_concentration
+    - V₂ = final_volume (returned value)
+        
+       
     Parameters
     ----------
     stock_concentration : float
