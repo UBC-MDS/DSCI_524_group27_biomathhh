@@ -12,10 +12,12 @@ website:
         href: getting_started.qmd
       - text: "Reference"
         href: reference/
+      - text: "Retrospective"
+        href: retrospective.qmd
 
 format:
   html:
-    theme: sketchy
+    theme: minty
     toc: true
 
 quartodoc:

@@ -1,0 +1,235 @@
+---
+title: "Project Retrospective"
+subtitle: "Team 27 Reflection and Future Improvements"
+author: "Group 27"
+date: "2026-01-30"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+---
+
+## Introduction
+
+This retrospective document provides a structured reflection on our python package project using the DAKI (Drop, Add, Keep, Improve) framework. The goal is to identify actionable insights for future projects, including capstone work.
+
+
+## DAKI Framework Analysis
+
+### 🗑️ DROP
+*What should we stop doing? What didn't work well?*
+
+**Practices to discontinue:**
+
+- Missing github issues for tasks
+- Breaking up related tasks amongst different team members
+- Cross-platform communication (Slack AND Github Issues)
+
+**Rationale:**
+
+Although our workflow and communication was fairly smooth, github issues were under-utilized when assigning tasks at the beginning of each milestone and assignees were not given for each task. This ended up making tracking individual and team progress more fragmented and difficult than it needed to be, and although issues were later opened and correctly assigned for the sake of Project Views, this would have been helpful to more thoroughly implement from Milestone 1.
+
+---
+
+### ➕ ADD
+*What should we start doing? What's missing?*
+
+**New practices/tools to introduce:**
+
+- publication to PyPi
+- create an issue template
+
+**Expected benefits:**
+
+Although we were told publishing to PyPi or TestPyPi was not necessary for this project, in a future iteration this would be helpful so that dependencies and versions could be automated and displayed for potential installers. Creating an issue template would help resolve some of the recounted difficulties with using github issues, as it would be easier to list out tasks and standardize the communication method across members/milestones.
+
+---
+
+### ✅ KEEP
+*What worked well? What should we continue?*
+
+**Successful practices:**
+
+- evenly distributing tasks amongst group members
+- incorporating TA/prof feedback when possible
+- paying attention to grading rubric
+
+**Why these worked:**
+
+These practices worked to ensure we were meeting the course expectations and we were all learning more about collaborative software development. Each group member had their strengths and were assigned tasks based on those strengths, ensuring a smooth workflow, as well as an even distribution of workload. This can be seen in the Completion Rate Analytical View and in the Project Board View.
+
+---
+
+### 🔧 IMPROVE
+*What should we do differently? What needs refinement?*
+
+**Areas for enhancement:**
+
+- Task breakdown granularity (create smaller issues for better tracking)
+- Documentation practices
+- Testing coverage
+
+**Proposed improvements:**
+
+- **Smaller task chunks**: Break down larger tasks into mini tasks that can be completed in 1-2 hours which improves progress visibility and reduces the chance of merge conflicts
+
+- **Documentation practices**: Documentation should follow a standardized template shared amongst the team and ensured to be compatible with quartopub early on (for both test and function scripts)
+
+- **Testing coverage**: Unit tests could be made more extensive and cover more edge cases, as potential use cases become more complex
+
+---
+
+## Deep Dive Analysis
+
+### 1. Tools and Infrastructure
+
+*If scaling up this or another project, what tools, infrastructure, and practices would we use?*
+
+#### Current Toolset Assessment
+
+| Tool/Practice | Effectiveness | Keep/Replace | Notes |
+|--------------|---------------|--------------|-------|
+| GitHub Actions (CI/CD)| High | Keep & Expand | Automated testing and building worked well, expand for publishing to PyPi|
+|pytest | High| Keep|Good test capability |
+|GitHub Issues & Projects |Medium |Keep & Improve |Underutilized early on, templates would help standardize |
+| LLMs (ChatGPT/Claude/Gemini) | High | Keep | Excellent for debugging, code review, documentation, saved significant time |
+
+#### Recommendations for Future Projects
+
+**GitHub Actions & CI/CD:**
+
+- Add workflow to automatically publish to PyPI on release tags
+- Add workflow to build and preview documentation on PRs
+
+**Code Quality & Testing:**
+
+- Implement integration tests in addition to unit tests
+
+**Team Collaboration:**
+
+- Use GitHub Issue templates for bugs, features, and questions
+- Implement PR templates with checklists
+- Set up branch protection rules requiring reviews and passing CI
+
+**Documentation & Communication:**
+
+- Add comprehensive tutorial with actual biological data analysis workthrough
+
+**Project Management:**
+
+- Create a project roadmap document
+- Use GitHub Projects with automation
+
+---
+
+### 2. Planning Accuracy
+
+*Analysis of milestone progress and estimation accuracy*
+
+View our [Milestone Progress in GitHub Projects](https://github.com/orgs/UBC-MDS/projects/321/insights/1)
+
+#### Estimation Patterns
+
+**Underestimated milestones:**
+
+- Milestone 4
+- Milestone 3
+
+**Overestimated milestones:**
+
+- Milestone 2
+
+**Lessons learned:**
+
+- focus on good documentation and issues management from the very beginning
+- have a non-team member review the documentation to ensure it makes sense and is thorough
+- test installation
+
+---
+
+### 3. Bus Factor & Team Resilience
+
+*Assessment of knowledge distribution and team redundancy*
+
+#### Team Workload Distribution
+
+See the [Team Workload Distribution](https://github.com/orgs/UBC-MDS/projects/321/views/2?groupedBy%5BcolumnId%5D=Assignees)
+
+#### Bus Factor Assessment
+
+**Current bus factor:**  2-3 (losing 1-2 team members would significantly impact the project)
+
+**High-dependency areas:**
+
+| Area/Component | Primary Owner | Backup Knowledge | Risk Level |
+|----------------|---------------|------------------|------------|
+| CI/CD & GitHub Actions | Victoria | Gurveer, Diana, Zhihao | Medium |
+| Documentation & quartodoc | Gurveer, Diana | Zhihao, Victoria | Low |
+| Testing infrastructure | Everyone | Everyone | High (everyone is responsible for their own tests)|
+
+**Knowledge concentration risks:**
+
+- Testing infrastructure knowledge is divided amongst all the members, not one consolidated knowledge base
+- GitHub Actions workflows fully understood by one team member, troubleshooting only easily done by one member
+- Documentation and quartodoc primarily revised and upheld by two members, not a risk
+
+**If a highest-contributing member was unavailable:**
+
+- Impact: low - moderate, everyone is capable of quickly picking up on others tasks
+- Likelihood of stalling: moderate, time would be needed to read through task documentation to catch up
+- Critical knowledge gaps: GitHub Workflow/Actions configuration
+
+#### Strategies for Improving Resilience
+
+**Knowledge sharing practices:**
+
+1. Have a task walkthrough in each scrum
+2. Have another team member sign off on work thoroughly (not just PRs)
+
+**Documentation improvements:**
+
+- Document setup/troubleshooting steps for CI/CD in CONTRIBUTING.md
+- Add inline comments explaining "why" not just "what" in complex code sections
+
+
+---
+
+## Action Items for Next Project
+
+### High Priority
+
+1. **Implement GitHub Issues workflow from day 1**
+2. **Centralize communication on GitHub**
+
+### Medium Priority
+
+1. **Improve knowledge distribution**
+2. **Establish code pair review**
+3. **Better milestone planning**
+
+### Nice to Have
+
+1. **Publish to PyPI**
+2. **Implement branch protection rules**
+
+---
+
+## Team Feedback
+
+### What We're Proud Of
+
+- **Successfully delivered a working Python package**
+- **Maintained good team dynamics throughout**
+- **Embraced feedback from TAs, peers, and instructors**
+
+### What We Learned
+
+- **GitHub is much more than version control**
+- **Documenation at all steps is key**
+- **Breaking down tasks is critical**
+
+---
+
+*This retrospective was completed on 2026-01-30 by Group 27*
