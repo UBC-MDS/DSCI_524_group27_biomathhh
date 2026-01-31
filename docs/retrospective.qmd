@@ -3,12 +3,6 @@ title: "Project Retrospective"
 subtitle: "Team 27 Reflection and Future Improvements"
 author: "Group 27"
 date: "2026-01-30"
-format:
-  html:
-    toc: true
-    toc-depth: 3
-    theme: cosmo
-    code-fold: true
 ---
 
 ## Introduction
