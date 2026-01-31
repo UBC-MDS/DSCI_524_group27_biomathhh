@@ -47,7 +47,7 @@ dependencies = [
 Homepage = "https://github.com/ubc-mds/biomathhh"
 "Source Code" = "https://github.com/ubc-mds/biomathhh"
 "Bug Tracker" = "https://github.com/ubc-mds/biomathhh/issues"
-Documentation = "https://ubc-mds.github.io/biomathhh/"
+Documentation = "https://ubc-mds.github.io/DSCI_524_group27_biomathhh/"
 Download = "https://test.pypi.org/project/biomathhh/#files"
 
 [project.optional-dependencies]
