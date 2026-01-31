@@ -13,7 +13,7 @@ requires = ["hatchling"]
 [project]
 name = "biomathhh"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "0.1.0"
+version = "3.0.0"
 
 description = ""
 authors = [
@@ -28,14 +28,14 @@ requires-python = ">= 3.10" # Adjust based on the minimum version of Python that
 readme = {"file" = "README.md", "content-type" = "text/markdown"}
 # Please consult https://pypi.org/classifiers/ for a full list.
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3 :: Only",
 ]
 # TODO: add keywords
-keywords = []
+keywords = ["biology", "mathematics", "dilution", "pH", "diversity", "exponential-growth"]
 # TODO: add dependencies
 dependencies = [
     "numpy>=1.24.0",
@@ -47,8 +47,8 @@ dependencies = [
 Homepage = "https://github.com/ubc-mds/biomathhh"
 "Source Code" = "https://github.com/ubc-mds/biomathhh"
 "Bug Tracker" = "https://github.com/ubc-mds/biomathhh/issues"
-Documentation = "https://github.com/ubc-mds/biomathhh/blob/main/README.md"
-Download = "https://pypi.org/project/biomathhh/#files"
+Documentation = "https://ubc-mds.github.io/biomathhh/"
+Download = "https://test.pypi.org/project/biomathhh/#files"
 
 [project.optional-dependencies]
 # The groups below should be in the [development-groups] table
